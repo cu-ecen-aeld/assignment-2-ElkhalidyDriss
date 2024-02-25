@@ -5,7 +5,7 @@
 int main(int argc, char *argv[]) {
     openlog("writer", LOG_PID, LOG_USER);
     
-    if (argc < 3) {
+    if (argc <= 2) {
         syslog(LOG_ERR, "Not all the arguments are specified");
         closelog();
         return 1;
